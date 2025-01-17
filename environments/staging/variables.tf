@@ -10,10 +10,10 @@ variable "cluster_name" {
   default     = "staging-stock-info-cluster"
 }
 
-variable "environment" {
+variable "environment_id" {
   description = "The environment label (e.g., staging, production)"
   type        = string
-  default     = "staging"
+  default     = "env-37ox0w"
 }
 
 # Confluent Cloud API Credentials

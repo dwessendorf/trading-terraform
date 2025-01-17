@@ -14,10 +14,8 @@ terraform {
 }
 
 provider "confluent" {
-  # Here you may configure your provider with necessary credentials.
-  # For example:
-  # confluent_api_key    = var.confluent_api_key
-  # confluent_api_secret = var.confluent_api_secret
+  cloud_api_key    = var.confluent_api_key
+  cloud_api_secret = var.confluent_api_secret
 }
 
 module "confluent_cluster" {
@@ -25,7 +23,7 @@ module "confluent_cluster" {
 
   region               = var.region
   cluster_name         = var.cluster_name
-  environment          = var.environment
+  environment_id       = var.environment_id
   confluent_api_key    = var.confluent_api_key
   confluent_api_secret = var.confluent_api_secret
 

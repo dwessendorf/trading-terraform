@@ -1,18 +1,18 @@
 variable "region" {
-  description = "The GCP region where the Confluent Cloud cluster will be deployed."
+  description = "Region where the cluster will be created"
   type        = string
 }
 
 variable "cluster_name" {
-  description = "The name of the Confluent Cloud cluster."
+  description = "Name of the Kafka cluster"
   type        = string
 }
 
-variable "environment" {
-  description = "The environment label."
+variable "environment_id" {
+  description = "Confluent environment ID"
   type        = string
+  default     = "env-37ox0w"  # Or another appropriate value.
 }
-
 # API credentials to be forwarded to the provider if needed.
 variable "confluent_api_key" {
   description = "Confluent Cloud API key."

@@ -1,10 +1,10 @@
 output "cluster_id" {
-  description = "The ID of the created Confluent Cloud cluster."
+  description = "ID of the created Kafka cluster"
   value       = confluent_kafka_cluster.this.id
 }
 
-output "cluster_status" {
-  description = "The status of the Confluent Cloud cluster."
-  value       = confluent_kafka_cluster.this.status
+output "bootstrap_endpoint" {
+  description = "Bootstrap endpoint for the Kafka cluster"
+  value       = confluent_kafka_cluster.this.bootstrap_endpoint
 }
 
